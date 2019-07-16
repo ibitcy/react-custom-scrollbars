@@ -482,7 +482,6 @@ export default class Scrollbars extends Component {
     }
 
     render() {
-
         /* eslint-disable no-unused-vars */
         const {
             onScroll,
