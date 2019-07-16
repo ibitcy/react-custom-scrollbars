@@ -507,11 +507,12 @@ export default class Scrollbars extends Component {
             autoHeightMax,
             style,
             children,
+            scrollbarWidth: scrollbarWidthProp,
             ...props
         } = this.props;
         /* eslint-enable no-unused-vars */
 
-        const scrollbarWidth = this.props.scrollbarWidth || getScrollbarWidth();
+        const scrollbarWidth = scrollbarWidthProp || getScrollbarWidth();
 
         const { didMountUniversal } = this.state;
 
