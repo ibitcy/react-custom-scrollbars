@@ -1,9 +1,8 @@
 {
   "name": "eo-react-custom-scrollbars",
-  "version": "5.1.1",
+  "version": "5.1.0",
   "description": "React scrollbars component",
   "main": "lib/index.js",
-  "types": "types/index.d.ts",
   "scripts": {
     "clean": "rimraf lib dist",
     "build": "babel src --out-dir lib",
