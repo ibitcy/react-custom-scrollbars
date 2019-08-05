@@ -513,6 +513,7 @@ export default class Scrollbars extends Component {
         /* eslint-enable no-unused-vars */
 
         const scrollbarWidth = scrollbarWidthProp || getScrollbarWidth();
+        const realScrollbarWidth = getScrollbarWidth();
 
         const { didMountUniversal } = this.state;
 
@@ -531,6 +532,9 @@ export default class Scrollbars extends Component {
             // Hide scrollbars by setting a negative margin
             marginRight: scrollbarWidth ? -scrollbarWidth : 0,
             marginBottom: scrollbarWidth ? -scrollbarWidth : 0,
+            paddingRight: realScrollbarWidth !== scrollbarWidth ? scrollbarWidth - realScrollbarWidth : 0,
+            paddingBottom: realScrollbarWidth !== scrollbarWidth ? scrollbarWidth - realScrollbarWidth : 0,
+
             ...(autoHeight && {
                 ...viewStyleAutoHeight,
                 // Add scrollbarWidth to autoHeight in order to compensate negative margins
