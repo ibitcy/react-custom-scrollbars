@@ -1,6 +1,6 @@
 {
   "name": "eo-react-custom-scrollbars",
-  "version": "5.1.2",
+  "version": "5.2.0",
   "description": "React scrollbars component",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
