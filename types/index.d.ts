@@ -50,7 +50,7 @@ declare module "eo-react-custom-scrollbars" {
     autoHeightMax?: number | string;
   }
 
-  export default class Scrollbars extends React.Component<ScrollbarProps> {
+  export class Scrollbars extends React.Component<ScrollbarProps> {
     scrollTop(top: number): void;
     scrollLeft(left: number): void;
     scrollToTop(): void;
