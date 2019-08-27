@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 /* eslint-disable react/prop-types */
 
 export function renderViewDefault(props) {
@@ -11,7 +11,7 @@ export function renderTrackHorizontalDefault({ style, ...props }) {
     right: 2,
     bottom: 2,
     left: 2,
-    borderRadius: 3
+    borderRadius: 3,
   };
   return <div style={finalStyle} {...props} />;
 }
@@ -22,7 +22,7 @@ export function renderTrackVerticalDefault({ style, ...props }) {
     right: 2,
     bottom: 2,
     top: 2,
-    borderRadius: 3
+    borderRadius: 3,
   };
   return <div style={finalStyle} {...props} />;
 }
@@ -30,9 +30,9 @@ export function renderTrackVerticalDefault({ style, ...props }) {
 export function renderThumbHorizontalDefault({ style, ...props }) {
   const finalStyle = {
     ...style,
-    cursor: "pointer",
-    borderRadius: "inherit",
-    backgroundColor: "rgba(0,0,0,.2)"
+    cursor: 'pointer',
+    borderRadius: 'inherit',
+    backgroundColor: 'rgba(0,0,0,.2)',
   };
   return <div style={finalStyle} {...props} />;
 }
@@ -40,9 +40,9 @@ export function renderThumbHorizontalDefault({ style, ...props }) {
 export function renderThumbVerticalDefault({ style, ...props }) {
   const finalStyle = {
     ...style,
-    cursor: "pointer",
-    borderRadius: "inherit",
-    backgroundColor: "rgba(0,0,0,.2)"
+    cursor: 'pointer',
+    borderRadius: 'inherit',
+    backgroundColor: 'rgba(0,0,0,.2)',
   };
   return <div style={finalStyle} {...props} />;
 }
