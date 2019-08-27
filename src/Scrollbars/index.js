@@ -339,11 +339,10 @@ export default class Scrollbars extends Component {
   }
 
   handleWindowResize() {
-    const { resizeThrottleTimeout } = this.props;
     clearTimeout(this.resizeThrottleTimeout);
     this.resizeThrottleTimeout = setTimeout(() => {
       this.update();
-    }, resizeThrottleTimeout);
+    }, 100);
   }
 
   handleHorizontalTrackMouseDown(event) {
@@ -733,7 +732,6 @@ Scrollbars.propTypes = {
   style: PropTypes.object,
   children: PropTypes.node,
   scrollbarWidth: PropTypes.number,
-  resizeThrottleTimeout: PropTypes.number,
 };
 
 Scrollbars.defaultProps = {
@@ -752,5 +750,4 @@ Scrollbars.defaultProps = {
   autoHeightMin: 0,
   autoHeightMax: 200,
   universal: false,
-  resizeThrottleTimeout: 50,
 };
