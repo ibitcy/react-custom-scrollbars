@@ -257,6 +257,11 @@ export default class Scrollbars extends Component {
       this.handleVerticalThumbMouseDown,
     );
     window.addEventListener('resize', this.handleWindowResize, false);
+    window.addEventListener(
+      'orientationchange',
+      this.handleWindowResize,
+      false,
+    );
   }
 
   removeListeners() {
@@ -298,6 +303,7 @@ export default class Scrollbars extends Component {
       this.handleVerticalThumbMouseDown,
     );
     window.removeEventListener('resize', this.handleWindowResize);
+    window.removeEventListener('orientationchange', this.handleWindowResize);
     // Possibly setup by `handleDragStart`
     this.teardownDragging();
   }
