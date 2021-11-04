@@ -22,6 +22,7 @@
     "react/prefer-es6-class": 0,
     "react/prefer-stateless-function": 0,
     "import/no-unresolved": 0,
+    "react/sort-comp": 0,
     "max-len": 0,
     "indent": [0, 4],
     "new-cap": 0,
@@ -33,7 +34,5 @@
     "no-underscore-dangle": 0,
     "prefer-arrow-callback": 0
   },
-  "plugins": [
-    "react"
-  ]
+  "plugins": ["react"]
 }

@@ -48,6 +48,8 @@ declare module "eo-react-custom-scrollbars" {
     autoHeight?: boolean;
     autoHeightMin?: number | string;
     autoHeightMax?: number | string;
+
+    resizeThrottleTimeout?: number;
   }
 
   export class Scrollbars extends React.Component<ScrollbarProps> {
