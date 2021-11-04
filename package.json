@@ -1,6 +1,6 @@
 {
   "name": "eo-react-custom-scrollbars",
-  "version": "5.2.1",
+  "version": "6.0.0",
   "description": "React scrollbars component",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
@@ -62,16 +62,16 @@
     "karma-sourcemap-loader": "^0.3.6",
     "karma-webpack": "^1.6.0",
     "mocha": "^2.2.5",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "rimraf": "^2.3.4",
     "simulant": "^0.2.2",
     "webpack": "^1.9.6",
     "webpack-dev-server": "^1.8.2"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0 || ^16.0.0",
-    "react-dom": "^0.14.0 || ^15.0.0 || ^16.0.0"
+    "react": "^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0"
   },
   "dependencies": {
     "dom-css": "^2.0.0",
