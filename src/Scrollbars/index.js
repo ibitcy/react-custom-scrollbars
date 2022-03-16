@@ -1,6 +1,6 @@
 import raf, { cancel as caf } from 'raf';
 import css from 'dom-css';
-import { Component, createElement, cloneElement } from 'react';
+import * as React from 'react';
 import PropTypes from 'prop-types';
 
 import isString from '../utils/isString';
@@ -31,7 +31,7 @@ import {
   renderThumbVerticalDefault,
 } from './defaultRenderElements';
 
-export default class Scrollbars extends Component {
+export default class Scrollbars extends React.Component {
   constructor(props, ...rest) {
     super(props, ...rest);
 
@@ -56,18 +56,14 @@ export default class Scrollbars extends Component {
 
     this.handleTrackMouseEnter = this.handleTrackMouseEnter.bind(this);
     this.handleTrackMouseLeave = this.handleTrackMouseLeave.bind(this);
-    this.handleHorizontalTrackMouseDown = this.handleHorizontalTrackMouseDown.bind(
-      this,
-    );
-    this.handleVerticalTrackMouseDown = this.handleVerticalTrackMouseDown.bind(
-      this,
-    );
-    this.handleHorizontalThumbMouseDown = this.handleHorizontalThumbMouseDown.bind(
-      this,
-    );
-    this.handleVerticalThumbMouseDown = this.handleVerticalThumbMouseDown.bind(
-      this,
-    );
+    this.handleHorizontalTrackMouseDown =
+      this.handleHorizontalTrackMouseDown.bind(this);
+    this.handleVerticalTrackMouseDown =
+      this.handleVerticalTrackMouseDown.bind(this);
+    this.handleHorizontalThumbMouseDown =
+      this.handleHorizontalThumbMouseDown.bind(this);
+    this.handleVerticalThumbMouseDown =
+      this.handleVerticalThumbMouseDown.bind(this);
     this.handleWindowResize = this.handleWindowResize.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
     this.handleDrag = this.handleDrag.bind(this);
@@ -311,7 +307,7 @@ export default class Scrollbars extends Component {
   handleScroll(event) {
     const { onScroll, onScrollFrame } = this.props;
     if (onScroll) onScroll(event);
-    this.update(values => {
+    this.update((values) => {
       const { scrollLeft, scrollTop } = values;
       this.viewScrollLeft = scrollLeft;
       this.viewScrollTop = scrollTop;
@@ -654,55 +650,55 @@ export default class Scrollbars extends Component {
       }),
     };
 
-    return createElement(
+    return React.createElement(
       tagName,
       {
         ...props,
         style: containerStyle,
-        ref: ref => {
+        ref: (ref) => {
           this.container = ref;
         },
       },
       [
-        cloneElement(
+        React.cloneElement(
           renderView({ style: viewStyle }),
           {
             key: 'view',
-            ref: ref => {
+            ref: (ref) => {
               this.view = ref;
             },
           },
           children,
         ),
-        cloneElement(
+        React.cloneElement(
           renderTrackHorizontal({ style: trackHorizontalStyle }),
           {
             key: 'trackHorizontal',
-            ref: ref => {
+            ref: (ref) => {
               this.trackHorizontal = ref;
             },
           },
-          cloneElement(
+          React.cloneElement(
             renderThumbHorizontal({ style: thumbHorizontalStyleDefault }),
             {
-              ref: ref => {
+              ref: (ref) => {
                 this.thumbHorizontal = ref;
               },
             },
           ),
         ),
-        cloneElement(
+        React.cloneElement(
           renderTrackVertical({ style: trackVerticalStyle }),
           {
             key: 'trackVertical',
-            ref: ref => {
+            ref: (ref) => {
               this.trackVertical = ref;
             },
           },
-          cloneElement(
+          React.cloneElement(
             renderThumbVertical({ style: thumbVerticalStyleDefault }),
             {
-              ref: ref => {
+              ref: (ref) => {
                 this.thumbVertical = ref;
               },
             },

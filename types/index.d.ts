@@ -5,9 +5,14 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
-import * as React from "react";
+import {
+  HTMLProps,
+  UIEventHandler,
+  StatelessComponent,
+  Component,
+} from 'react';
 
-declare module "eo-react-custom-scrollbars" {
+declare module 'eo-react-custom-scrollbars' {
   export interface positionValues {
     top: number;
     left: number;
@@ -19,18 +24,18 @@ declare module "eo-react-custom-scrollbars" {
     scrollTop: number;
   }
 
-  export interface ScrollbarProps extends React.HTMLProps<Scrollbars> {
-    onScroll?: React.UIEventHandler<any>;
+  export interface ScrollbarProps extends HTMLProps<Scrollbars> {
+    onScroll?: UIEventHandler<any>;
     onScrollFrame?: (values: positionValues) => void;
     onScrollStart?: () => void;
     onScrollStop?: () => void;
     onUpdate?: (values: positionValues) => void;
 
-    renderView?: React.StatelessComponent<any>;
-    renderTrackHorizontal?: React.StatelessComponent<any>;
-    renderTrackVertical?: React.StatelessComponent<any>;
-    renderThumbHorizontal?: React.StatelessComponent<any>;
-    renderThumbVertical?: React.StatelessComponent<any>;
+    renderView?: StatelessComponent<any>;
+    renderTrackHorizontal?: StatelessComponent<any>;
+    renderTrackVertical?: StatelessComponent<any>;
+    renderThumbHorizontal?: StatelessComponent<any>;
+    renderThumbVertical?: StatelessComponent<any>;
 
     scrollbarWidth?: number;
 
@@ -52,7 +57,7 @@ declare module "eo-react-custom-scrollbars" {
     resizeThrottleTimeout?: number;
   }
 
-  export class Scrollbars extends React.Component<ScrollbarProps> {
+  export class Scrollbars extends Component<ScrollbarProps> {
     scrollTop(top: number): void;
     scrollLeft(left: number): void;
     scrollToTop(): void;
